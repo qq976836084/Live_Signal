@@ -18,7 +18,7 @@ Annualization assumes 245 trading days. October 2026 data is excluded.
 
 ### Strategy, Benchmark and Excess Performance
 
-![Strategy, benchmark and excess performance](assets/01_strategy_benchmark_excess.png)
+![Strategy, benchmark and excess performance](01_strategy_benchmark_excess.png)
 
 | Metric | In-sample | OOS |
 |---|---:|---:|
@@ -39,7 +39,7 @@ Additive excess drawdown is measured in percentage points (pp).
 
 ### Out-of-Sample Performance
 
-![OOS performance](assets/02_oos_performance.png)
+![OOS performance](02_oos_performance.png)
 
 The OOS segment generates 31.17 percentage points of cumulative additive
 excess across 367 observations. Annualized arithmetic excess is 20.81%,
@@ -50,7 +50,7 @@ percentage points, while tracking error increases from 5.92% to 6.28%.
 
 ### Monthly Consistency
 
-![Monthly excess returns](assets/03_monthly_consistency.png)
+![Monthly excess returns](03_monthly_consistency.png)
 
 Excess returns are positive in 16 of 18 OOS months. The strongest OOS
 month is May 2025 (+4.28 pp); the weakest is June 2026 (-5.36 pp).
@@ -58,7 +58,7 @@ January–September 2026 contributes 12.46 pp of additive excess.
 
 ### Rolling Performance and Drawdown
 
-![Rolling information ratio and tracking error](assets/04_rolling_risk.png)
+![Rolling information ratio and tracking error](04_rolling_risk.png)
 
 The maximum OOS additive excess drawdown is 6.93 pp, from the
 June 1, 2026 peak to the June 30, 2026 trough. The previous peak
@@ -71,5 +71,3 @@ compared with 3.31 for the full OOS period. Rolling windows use
 Illustrative supplied-series analysis. OOS denotes the specified date
 segment, not independent live validation. The supplied return file does
 not identify a transaction-cost scenario.
-
-[Download the full report](assets/Part_One_Signal_Performance_v6.pdf)
