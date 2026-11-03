@@ -71,3 +71,36 @@ compared with 3.31 for the full OOS period. Rolling windows use
 Illustrative supplied-series analysis. OOS denotes the specified date
 segment, not independent live validation. The supplied return file does
 not identify a transaction-cost scenario.
+
+## Part Two: Incremental Contribution
+
+Sample period: January 2, 2020–September 30, 2026.  
+OOS period: April 1, 2025–September 30, 2026.
+
+### Improvement over the Company Baseline
+
+![Combined signal versus company baseline](05_combination_improvement.png)
+
+| OOS metric | Company baseline | Combined signal | Change |
+|---|---:|---:|---:|
+| Annualized excess return | 22.42% | 24.40% | +1.97 pp |
+| Information ratio | 3.74 | 4.52 | +0.78 |
+| Tracking error | 5.99% | 5.40% | -0.59 pp |
+| Maximum additive excess drawdown | 4.93 pp | 5.26 pp | +0.33 pp |
+| Cumulative additive excess | 33.59 pp | 36.55 pp | +2.96 pp |
+
+The combined signal delivers higher excess return and better
+risk-adjusted performance than the company baseline. Tracking error
+decreases, although maximum additive excess drawdown widens slightly.
+
+Changes are calculated before rounding. Annualization assumes
+245 trading days; pp denotes percentage points.
+
+### Correlation between My Signal and the Company Baseline
+
+![Daily excess-return correlation](06_signal_correlation.png)
+
+| Metric | In-sample | OOS | Full sample |
+|---|---:|---:|---:|
+| Trading observations | 1,269 | 367 | 1,636 |
+| Daily excess-return correlation | 0.519 | 0.580 | 0.534 |
