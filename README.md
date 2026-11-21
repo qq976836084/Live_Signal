@@ -23,18 +23,14 @@ OOS period: April 1, 2025–September 30, 2026.
 |---|---:|---:|
 | Trading observations | 1,269 | 367 |
 | Annualized arithmetic excess | 24.39% | 20.81% |
-| Information ratio | 4.12 | 3.31 |
-| Maximum additive excess drawdown | 5.36 pp | 6.93 pp |
+| Information ratio | 4.09 | 3.37 |
+| Maximum additive excess drawdown | 4.37 pp | 6.93 pp |
 | Positive excess months | 90.48% | 88.89% |
 
 Daily strategy returns are calculated as daily excess plus benchmark
 returns. Strategy and benchmark curves are compounded. Relative cumulative
 excess equals strategy wealth divided by benchmark wealth, minus one.
 Additive excess drawdown is measured in percentage points (pp).
-
-### Out-of-Sample Performance
-
-![OOS performance](02_oos_performance.png)
 
 ## Return Decomposition
 
@@ -57,13 +53,7 @@ Additive excess drawdown is measured in percentage points (pp).
 
 ![20 Barra style factor contributions](06_style_factor_contributions.png)
 
-### Monthly Consistency
 
-![Monthly excess returns](03_monthly_consistency.png)
-
-Excess returns are positive in 16 of 18 OOS months. The strongest OOS
-month is May 2025 (+4.28 pp); the weakest is June 2026 (-5.36 pp).
-January–September 2026 contributes 12.46 pp of additive excess.
 
 ### Rolling Performance and Drawdown
 
