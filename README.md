@@ -44,6 +44,37 @@ with an information ratio of 3.31.
 Compared with in-sample results, annualized excess decreases by 3.58
 percentage points, while tracking error increases from 5.92% to 6.28%.
 
+## Return Decomposition
+
+This decomposition uses constructed excess returns and actual daily Barra factor returns. It is not measured live holdings-based attribution. All 20 fitted active style exposures are bounded at ±0.3.
+
+The calibration uses 245 trading days per year and the source company portfolio’s OPEN execution and saved transaction costs, which differ from the methodology above.
+
+### Cumulative Return Attribution
+
+| Cumulative contribution (pp) | IS | OOS |
+|---|---:|---:|
+| 20 style factors | +37.29 | +12.07 |
+| Industry / country | +5.43 | −0.74 |
+| Model residual | +97.73 | +25.11 |
+| Costs | −14.11 | −5.27 |
+| **Net excess return** | **+126.33** | **+31.17** |
+
+The residual row groups model, execution-timing and benchmark-difference components. Totals are calculated before rounding.
+
+### Overall Return Decomposition
+
+![Return decomposition](07_return_decomposition.png)
+
+Curves show cumulative daily contributions in percentage points and restart at the beginning of each period. The residual curve uses the same definition as the table. Industry/country contributions and costs are reported separately.
+
+### Contributions from 20 Barra Style Factors
+
+![20 Barra style factor contributions](08_style_factor_contributions.png)
+
+Each daily factor contribution equals its fitted active exposure multiplied by the actual factor return. Contributions sum to **+37.29 pp IS** and **+12.07 pp OOS**.
+
+Exposures are fitted using realized returns and period totals. The exposure bounds alone do not establish portfolio feasibility or tradability.
 ### Monthly Consistency
 
 ![Monthly excess returns](03_monthly_consistency.png)
