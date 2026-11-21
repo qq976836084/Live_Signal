@@ -3,7 +3,7 @@
 ## Live Signal Tracking Methodology
 
 - Model updates: Quarterly retraining; historical out-of-sample signals remain unchanged.
-- Rebalancing: Daily, using full-day VWAP as the assumed execution price.
+- Rebalancing: Daily, using VWAP of the first half hour as the assumed execution price.
 - Exclusions: ST stocks, suspended stocks, stocks newly listed in the current quarter, and stocks with fewer than 40 trading days in the past 60 trading days.
 - Transaction costs: Evaluated at 5 and 15 bps.
 - Turnover: Reported on a one-way basis.
@@ -14,7 +14,7 @@
 
 Sample period: January 2, 2020–September 30, 2026.  
 OOS period: April 1, 2025–September 30, 2026.  
-Annualization assumes 245 trading days. October 2026 data is excluded.
+Annualization assumes 250 trading days.
 
 ### Strategy, Benchmark and Excess Performance
 
@@ -23,12 +23,8 @@ Annualization assumes 245 trading days. October 2026 data is excluded.
 | Metric | In-sample | OOS |
 |---|---:|---:|
 | Trading observations | 1,269 | 367 |
-| Strategy CAGR | 30.07% | 37.03% |
-| CSI 1000 CAGR | 2.19% | 11.19% |
 | Annualized arithmetic excess | 24.39% | 20.81% |
 | Information ratio | 4.12 | 3.31 |
-| Tracking error | 5.92% | 6.28% |
-| Strategy NAV maximum drawdown | 31.32% | 24.53% |
 | Maximum additive excess drawdown | 5.36 pp | 6.93 pp |
 | Positive excess months | 90.48% | 88.89% |
 
@@ -83,9 +79,8 @@ OOS period: April 1, 2025–September 30, 2026.
 
 | OOS metric | Company baseline | Combined signal | Change |
 |---|---:|---:|---:|
-| Annualized excess return | 22.42% | 24.40% | +1.97 pp |
+| Annualized excess return | 21.42% | 24.38% | +2.96 pp |
 | Information ratio | 3.74 | 4.52 | +0.78 |
-| Tracking error | 5.99% | 5.40% | -0.59 pp |
 | Maximum additive excess drawdown | 4.93 pp | 5.26 pp | +0.33 pp |
 | Cumulative additive excess | 33.59 pp | 36.55 pp | +2.96 pp |
 
@@ -94,9 +89,8 @@ risk-adjusted performance than the company baseline. Tracking error
 decreases, although maximum additive excess drawdown widens slightly.
 
 Changes are calculated before rounding. Annualization assumes
-245 trading days; pp denotes percentage points.
+250 trading days; pp denotes percentage points.
 
-### Correlation between My Signal and the Company Baseline
 
 ![Daily excess-return correlation](06_signal_correlation.png)
 
