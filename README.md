@@ -27,11 +27,6 @@ OOS period: April 1, 2025–September 30, 2026.
 | Maximum additive excess drawdown | 4.37 pp | 6.93 pp |
 | Positive excess months | 90.48% | 88.89% |
 
-Daily strategy returns are calculated as daily excess plus benchmark
-returns. Strategy and benchmark curves are compounded. Relative cumulative
-excess equals strategy wealth divided by benchmark wealth, minus one.
-Additive excess drawdown is measured in percentage points (pp).
-
 ## Return Decomposition
 
 ### Cumulative Return Attribution
@@ -53,23 +48,6 @@ Additive excess drawdown is measured in percentage points (pp).
 
 ![20 Barra style factor contributions](06_style_factor_contributions.png)
 
-
-
-### Rolling Performance and Drawdown
-
-![Rolling information ratio and tracking error](04_rolling_risk.png)
-
-The maximum OOS additive excess drawdown is 6.93 pp, from the
-June 1, 2026 peak to the June 30, 2026 trough. The previous peak
-is recovered on September 4, 2026.
-
-At September 30, 2026, the trailing 63-day information ratio is 3.65,
-compared with 3.31 for the full OOS period. Rolling windows use
-63 observations and may span the IS/OOS boundary.
-
-Illustrative supplied-series analysis. OOS denotes the specified date
-segment, not independent live validation. The supplied return file does
-not identify a transaction-cost scenario.
 
 ## Part Two: Incremental Contribution
 
