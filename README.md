@@ -25,8 +25,6 @@ OOS period: April 1, 2025–September 30, 2026.
 | Annualized arithmetic excess | 24.39% | 20.81% |
 | Information ratio | 4.09 | 3.37 |
 | Maximum additive excess drawdown | 4.37 pp | 6.93 pp |
-| Positive excess months | 90.48% | 88.89% |
-
 
 
 ## Excess Return Drawdown Analysis
@@ -69,7 +67,7 @@ The following diagnostics use the original company portfolio. Active weight is p
 | Busiest 5% model-residual contribution (pp) | −3.402 | −2.287 | −2.851 |
 
 
-## Part Two: Incremental Contribution
+## Incremental Contribution
 
 Sample period: January 2, 2020–September 30, 2026.  
 OOS period: April 1, 2025–September 30, 2026.
@@ -99,3 +97,85 @@ Changes are calculated before rounding. Annualization assumes
 |---|---:|---:|---:|
 | Trading observations | 1,269 | 367 | 1,636 |
 | Daily excess-return correlation | 0.519 | 0.580 | 0.534 |
+
+
+
+# Factor Pool
+## Factor Pool Overview
+
+The analysis compares the company’s factor pool with my independently developed factor pool.
+
+| Factor pool | Number of factors |
+|---|---:|
+| Company | 8,834 |
+| Own | 3,573 |
+
+### Evaluation Periods
+
+- **In-sample:** 2018Q1–2024Q2.
+- **Out-of-sample:** 2024Q3–2026Q3.
+
+### Factor Scope and Screening
+
+Both pools contain **price-volume factors only**; fundamental factors are excluded.
+
+Initial screening uses the following criteria:
+
+- In-sample Pearson IC greater than **0.02**.
+- In-sample top-decile five-day excess return greater than **15 bp**.
+- In sample pairwise correlation between factor long return time series below **0.60**.
+
+### Factor Versions
+
+- **Original:** Factors with standard data preprocessing only.
+- **Barra:** Residuals obtained by regressing the original factor values on all Barra style and industry exposures.
+
+### Evaluation Metrics
+
+The comparison reports **Min, P25, Median, P75, P90, P99, and Max** across factors for:
+
+- **Top-decile five-day excess return (bp):** Five-day excess return of stocks ranked in the top 10% by factor value.
+- **Pearson IC:** Cross-sectional Pearson correlation between factor values and subsequent five-day excess returns.
+
+### Pearson IC
+
+| Version | Period | Factor pool | Factor count | Min | P25 | Median | P75 | P90 | P99 | Max |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Original | IS | Company | 8,834 | 0.0200 | 0.0270 | 0.0310 | 0.0368 | 0.0427 | 0.0538 | 0.0677 |
+| Original | IS | Own | 3,573 | 0.0200 | 0.0261 | 0.0301 | 0.0337 | 0.0407 | 0.0531 | 0.0623 |
+| Original | OOS | Company | 8,834 | 0.0163 | 0.0224 | 0.0270 | 0.0317 | 0.0371 | 0.0466 | 0.0583 |
+| Original | OOS | Own | 3,573 | 0.0167 | 0.0222 | 0.0269 | 0.0322 | 0.0372 | 0.0464 | 0.0513 |
+| Neutralized | IS | Company | 8,834 | 0.0039 | 0.0148 | 0.0186 | 0.0238 | 0.0291 | 0.0394 | 0.0531 |
+| Neutralized | IS | Own | 3,573 | 0.0081 | 0.0163 | 0.0195 | 0.0239 | 0.0282 | 0.0365 | 0.0460 |
+| Neutralized | OOS | Company | 8,834 | −0.0046 | 0.0121 | 0.0159 | 0.0207 | 0.0260 | 0.0358 | 0.0467 |
+| Neutralized | OOS | Own | 3,573 | −0.0045 | 0.0140 | 0.0178 | 0.0219 | 0.0264 | 0.0336 | 0.0432 |
+
+### Top-10% Five-Day Excess Return (bp)
+
+| Version | Period | Factor pool | Factor count | Min | P25 | Median | P75 | P90 | P99 | Max |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Original | IS | Company | 8,834 | 15.00 | 18.04 | 21.12 | 24.94 | 28.58 | 34.42 | 42.39 |
+| Original | IS | Own | 3,573 | 15.00 | 17.90 | 20.64 | 24.04 | 27.24 | 33.71 | 40.38 |
+| Original | OOS | Company | 8,834 | 12.27 | 15.73 | 19.80 | 24.37 | 28.56 | 36.05 | 47.58 |
+| Original | OOS | Own | 3,573 | 12.16 | 16.21 | 19.78 | 23.67 | 27.49 | 34.12 | 41.79 |
+| Neutralized | IS | Company | 8,834 | 0.0068 | 4.35 | 8.52 | 12.74 | 16.19 | 22.42 | 28.94 |
+| Neutralized | IS | Own | 3,573 | 0.0024 | 9.41 | 13.74 | 17.73 | 20.83 | 25.11 | 31.07 |
+| Neutralized | OOS | Company | 8,834 | −10.33 | 1.00 | 7.45 | 12.39 | 16.47 | 22.59 | 30.30 |
+| Neutralized | OOS | Own | 3,573 | −9.28 | 5.48 | 10.70 | 15.23 | 19.21 | 26.44 | 33.75 |
+
+### PCA Analysis of Factor Pools
+
+| Version | Pool | Factor count | Series | PC1 variance explained | PCs for 80% variance | PCs for 90% variance | First 100 PCs variance explained |
+|---|---|---:|---|---:|---:|---:|---:|
+| Size | Company | 8,834 | IC | 39.0% | 37 | 150 | 87.2% |
+| Size | Own | 3,573 | IC | 35.8% | 14 | 52 | 93.6% |
+| Size | Company | 8,834 | Top-decile returns | 41.8% | 43 | 181 | 85.9% |
+| Size | Own | 3,573 | Top-decile returns | 36.3% | 25 | 123 | 88.8% |
+| Barra20 | Company | 8,834 | IC | 32.8% | 123 | 297 | 77.8% |
+| Barra20 | Own | 3,573 | IC | 37.5% | 42 | 138 | 87.5% |
+| Barra20 | Company | 8,834 | Top-decile returns | 33.0% | 113 | 309 | 78.9% |
+| Barra20 | Own | 3,573 | Top-decile returns | 30.9% | 93 | 267 | 80.7% |
+
+
+# Timing Strategy
+
