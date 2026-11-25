@@ -29,57 +29,44 @@ OOS period: April 1, 2025–September 30, 2026.
 
 
 
-## Return Decomposition
+## Excess Return Drawdown Analysis
 
-### Cumulative Return Attribution
+### 1. Loss Attribution
 
-| Cumulative contribution (pp) | IS | OOS |
-|---|---:|---:|
-| 20 style factors | +37.29 | +12.07 |
-| Industry / country | +5.43 | −0.74 |
-| Model residual | +97.73 | +25.11 |
-| Costs | −14.11 | −5.27 |
-| **Net excess return** | **+126.33** | **+31.17** |
+The five episodes below have either total excess return or residual return max drawdown greater than 3 percentage points (pp).
 
-### Overall Return Decomposition
+| Episode | Loss window | Total loss (pp) | 20 style factors (pp) | Industry / country (pp) | Costs (pp) | Residual (pp) |
+|---|---|---:|---:|---:|---:|---:|
+| **OOS-1** | Apr 9–Jun 30, 2026 | **−6.930** | −0.560 | −1.297 | −0.925 | −4.147 |
+| IS-1 | Dec 4, 2020–Jan 4, 2021 | **−4.370** | −0.223 | −0.273 | −0.071 | −3.803 |
+| IS-2 | Jan 18–Feb 7, 2024 | **−4.329** | −3.854 | +0.259 | −0.221 | -0.513 |
+| IS-3 | Jan 2–Feb 25, 2020 | **−3.786** | −3.419 | −1.056 | −0.206 | +0.895 |
+| IS-4 | Sep 23–Oct 31, 2024 | **−3.236** | +0.558 | +0.344 | −0.339 | −3.799 |
 
-![Return decomposition](05_return_decomposition.png)
+### 2. Market Conditions During Residual-Loss Episodes
 
+| Market characteristic | OOS-1 | IS-1 | IS-4 |
+|---|---|---|---|
+| Loss window | Apr 9–Jun 30, 2026 | Dec 4, 2020–Jan 4, 2021 | Sep 23–Oct 31, 2024 |
+| CSI 1000 return | +10.73% | +1.30% | +37.04% |
+| Median constituent return | −15.20% | −5.75% | +28.82% |
+| Constituents beating the index | 22.7% | 28.6% | 36.6% |
+| Breadth percentile | 0.13th | 1.36th | 19.48th |
+| Trading amount in busiest 5% | 35.55% | 32.74% | 33.87% |
+| Concentration percentile | 97.47th | 67.08th | 78.05th |
 
-### Contributions from 20 Barra Style Factors
+### 3. Portfolio Impact: Underweighting Winners and Highly Active Stocks
 
-![20 Barra style factor contributions](06_style_factor_contributions.png)
+The following diagnostics use the original company portfolio. Active weight is portfolio weight minus benchmark weight; negative values indicate underweights.
 
-## Excess Return Drawdown Attribution
-
-The table decomposes selected loss windows into 20 style factors, industry/country effects, and residual contributions. All values are in percentage points (pp); positive contributions offset losses.
-
-This scenario uses revised residual assumptions while retaining the previous style and industry contributions. Total losses are the sum of these components, rather than maximum drawdowns recalculated from daily returns. Residual contributions include trading timing, benchmark differences, and transaction costs.
-
-| Episode | Loss window | 20 style factors (pp) | Industry / country (pp) | Residual (pp) | Total loss (pp) |
-|---|---|---:|---:|---:|---:|
-| **OOS-1** | Apr 9–Jun 30, 2026 | −0.560 | −1.297 | −5.072 | **−6.930** |
-| IS-1 | Dec 4, 2020–Jan 4, 2021 | −0.723 | −0.773 | −3.874 | **−5.370** |
-| IS-2 | Jan 18–Feb 7, 2024 | −5.354 | +0.359 | +0.666 | **−4.329** |
-| IS-3 | Jan 2–Feb 25, 2020 | −3.419 | −1.056 | +0.689 | **−3.786** |
-| IS-4 | Sep 23–Oct 31, 2024 | +1.058 | +0.844 | −3.138 | **−1.235** |
-
-*Totals use unrounded values. IS-4 refers to the episode previously labeled IS-5; the original IS-4 episode has been excluded.*
-
-### Drawdown Decomposition
-
-![Excess return drawdown attribution](20_drawdown_attribution.png)
-
-### Main Observations
-
-- **OOS-1:** Residual losses account for approximately 73% of the total loss. Style and industry contributions are also negative.
-- **IS-1:** Residual losses account for approximately 72% of the total loss, with additional losses from styles and industries.
-- **IS-2:** Style factors dominate the loss. Positive industry and residual contributions partially offset the −5.354 pp style contribution.
-- **IS-3:** Both style and industry exposures contribute negatively, while the residual provides a partial offset.
-- **IS-4:** Positive style and industry contributions offset approximately 61% of the residual loss, leaving a total loss of 1.235 pp.
-
-The revised IS-4 total is below 3 pp and is retained here for comparison.
-
+| Portfolio impact | OOS-1 | IS-1 | IS-4 |
+|---|---:|---:|---:|
+| **Outperformer-group analysis** | | | |
+| Average active weight in outperformers (pp) | −14.380 | −18.087 | −25.258 |
+| Outperformers’ model-residual contribution (pp) | −4.436 | −2.677 | −3.134 |
+| **Trading-activity-group analysis** | | | |
+| Average active weight in busiest 5% (pp) | −7.924 | −9.284 | −7.178 |
+| Busiest 5% model-residual contribution (pp) | −3.402 | −2.287 | −2.851 |
 
 
 ## Part Two: Incremental Contribution
