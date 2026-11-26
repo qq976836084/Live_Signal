@@ -33,11 +33,11 @@ OOS period: April 1, 2025–September 30, 2026.
 
 The three episodes below have residual return max drawdown greater than 3 percentage points (pp).
 
-| Episode | Loss window | Total loss (pp) | 20 style factors (pp) | Industry / country (pp) | Costs (pp) | Residual (pp) |
-|---|---|---:|---:|---:|---:|---:|
-| **OOS-1** | Apr 9–Jun 30, 2026 | **−6.724** | −0.560 | −1.297 | −0.825 | −4.042 |
-| IS-1 | Dec 4, 2020–Jan 4, 2021 | **−4.421** | −0.223 | −0.324 | −0.071 | −3.803 |
-| IS-2 | Sep 23–Oct 31, 2024 | **−3.236** | +0.558 | +0.344 | −0.339 | −3.799 |
+| Episode | Loss window | Total loss (pp) | 20 style factors (pp) | Industry / country (pp) | Residual (pp) |
+|---|---|---:|---:|---:|---:|
+| **OOS-1** | Apr 9–Jun 30, 2026 | **−6.724** | −0.985 | −1.697 | −4.042 |
+| IS-1 | Dec 4, 2020–Jan 4, 2021 | **−4.421** | −0.294 | −0.324 | −3.803 |
+| IS-2 | Sep 23–Oct 31, 2024 | **−3.236** | +0.443 | +0.120 | −3.799 |
 
 ### 2. Market Conditions During Residual-Loss Episodes
 
@@ -149,10 +149,10 @@ All comparisons show **Without timing → With timing**.
 | Original | IS | Own | 3,573 | 0.0300 | 0.0361 | 0.0381 | 0.0437 | 0.0487 | 0.0621 | 0.0693 |
 | Original | OOS | Company | 8,834 | 0.0243 | 0.0324 | 0.0370 | 0.0417 | 0.0471 | 0.0566 | 0.0623 |
 | Original | OOS | Own | 3,573 | 0.0247 | 0.0342 | 0.0396 | 0.0431 | 0.0472 | 0.0564 | 0.0613 |
-| Neutralized | IS | Company | 8,834 | -0.0239 | -0.0048 | 0.0186 | 0.0238 | 0.0291 | 0.0394 | 0.0531 |
-| Neutralized | IS | Own | 3,573 | -0.0181 | 0.0063 | -0.0095 | 0.0239 | 0.0282 | 0.0365 | 0.0460 |
-| Neutralized | OOS | Company | 8,834 | −0.0346 | -0.0021 | 0.0159 | 0.0207 | 0.0260 | 0.0358 | 0.0467 |
-| Neutralized | OOS | Own | 3,573 | −0.0245 | 0.0040 | 0.0178 | 0.0219 | 0.0264 | 0.0336 | 0.0432 |
+| Neutralized | IS | Company | 8,834 | -0.0239 | -0.0048 | 0.0146 | 0.0238 | 0.0291 | 0.0394 | 0.0531 |
+| Neutralized | IS | Own | 3,573 | -0.0181 | 0.0063 | 0.0155 | 0.0239 | 0.0282 | 0.0365 | 0.0460 |
+| Neutralized | OOS | Company | 8,834 | −0.0346 | -0.0021 | 0.0129 | 0.0207 | 0.0260 | 0.0358 | 0.0467 |
+| Neutralized | OOS | Own | 3,573 | −0.0245 | 0.0040 | 0.0128 | 0.0219 | 0.0264 | 0.0336 | 0.0432 |
 
 ### Top-10% Five-Day Excess Return (bp)
 
@@ -162,10 +162,10 @@ All comparisons show **Without timing → With timing**.
 | Original | IS | Own | 3,573 | 15.00 | 17.90 | 20.64 | 24.04 | 27.24 | 33.71 | 40.38 |
 | Original | OOS | Company | 8,834 | 12.27 | 15.73 | 19.80 | 24.37 | 28.56 | 36.05 | 47.58 |
 | Original | OOS | Own | 3,573 | 12.16 | 16.21 | 19.78 | 23.67 | 27.49 | 34.12 | 41.79 |
-| Neutralized | IS | Company | 8,834 | 0.00 | 6.35 | 10.52 | 15.74 | 19.19 | 25.42 | 31.94 |
-| Neutralized | IS | Own | 3,573 | 0.00 | 9.41 | 13.74 | 17.73 | 20.83 | 25.11 | 31.07 |
-| Neutralized | OOS | Company | 8,834 | 0.00 | 3.03 | 10.45 | 13.39 | 19.47 | 25.59 | 34.30 |
-| Neutralized | OOS | Own | 3,573 | 0.00 | 5.48 | 10.70 | 15.23 | 19.21 | 26.44 | 33.75 |
+| Neutralized | IS | Company | 8,834 | -30.33 | -6.35 | 10.52 | 15.74 | 19.19 | 25.42 | 31.94 |
+| Neutralized | IS | Own | 3,573 | -26.41 | -5.41 | 13.74 | 17.73 | 20.83 | 25.11 | 31.07 |
+| Neutralized | OOS | Company | 8,834 | -27.49 | -3.03 | 10.45 | 13.39 | 19.47 | 25.59 | 34.30 |
+| Neutralized | OOS | Own | 3,573 | -28.30 | -5.48 | 10.70 | 15.23 | 19.21 | 26.44 | 33.75 |
 
 ### PCA Analysis of Factor Pools
 
