@@ -185,7 +185,7 @@ The optimized portfolio uses CSI 1000 as its benchmark.
 
 | Period | Annualized excess return | Sharpe ratio | Max drawdown |
 |---:|---:|---:|---:|
-| In-sample (IS) | 19.49% | 3.97 | 5.89% |
-| Out-of-sample (OOS)| 15.25% | 2.73 | 4.96% |
+| In-sample (IS) | 19.49% | 3.97 | 4.89% |
+| Out-of-sample (OOS)| 15.25% | 2.73 | 5.96% |
 
 
