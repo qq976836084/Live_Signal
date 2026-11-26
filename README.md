@@ -46,12 +46,23 @@ The five episodes below have either total excess return or residual return max d
 | Market characteristic | OOS-1 | IS-1 | IS-4 |
 |---|---|---|---|
 | Loss window | Apr 9–Jun 30, 2026 | Dec 4, 2020–Jan 4, 2021 | Sep 23–Oct 31, 2024 |
+| **Outperformer-group analysis** | | | |
 | CSI 1000 return | +10.73% | +1.30% | +37.04% |
 | Median constituent return | −15.20% | −5.75% | +28.82% |
-| Constituents beating the index | 22.7% | 28.6% | 36.6% |
+| Outperformers beating the index | 22.7% | 28.6% | 36.6% |
 | Breadth percentile | 0.13th | 1.36th | 19.48th |
+| Average benchmark weight in outperformers (%) | 35.078 | 35.572 | 38.002 |
+| Average portfolio weight in outperformers (%) | 20.698 | 17.485 | 16.744 |
+| Average active weight in outperformers (pp) | −14.380 | −18.087 | −21.258 |
+| Outperformers’ model-residual contribution (pp) | −4.436 | −2.677 | −2.734 |
+| **Trading-activity-group analysis** | | | |
 | Trading amount in busiest 5% | 35.55% | 32.74% | 33.87% |
 | Concentration percentile | 97.47th | 67.08th | 78.05th |
+| Average benchmark weight in busiest 5% (%) | 14.802 | 9.298 | 9.193 |
+| Average portfolio weight in busiest 5% (%) | 6.878 | 3.014 | 2.015 |
+| Average active weight in busiest 5% (pp) | −7.924 | −6.284 | −7.178 |
+| Busiest 5% model-residual contribution (pp) | −3.402 | −1.787 | −2.251 |
+
 
 ### 3. Portfolio Impact: Underweighting Winners and Highly Active Stocks
 
@@ -98,7 +109,33 @@ Changes are calculated before rounding. Annualization assumes
 | Trading observations | 1,269 | 367 | 1,636 |
 | Daily excess-return correlation | 0.519 | 0.580 | 0.534 |
 
+# Timing Strategy
 
+## Timing Strategy Settings
+- Exposure range: 0–1.2× portfolio equity.
+- Daily adjustment limit: Maximum change in target exposure of 0.4× equity (40 percentage points).
+- No-timing comparison: Constant 1.0× target exposure.
+
+## Overall Performance
+ ![Historical NAV and exposure](./performance_nav_exposure.png)
+
+## In Sample Performance (2020Q1–2026Q2)
+
+All comparisons show **Without timing → With timing**.
+
+| Portfolio | Annualized Absolute Return | Sharpe Ratio | Max Drawdown | Avg. Exposure |
+|---|---:|---:|---:|---:|
+| Company | 49.90% → **49.98%** | 1.46 → **1.61** | −39.50% → **−23.75%** | 100% → 79.32% |
+| My Signal | 48.13% → **54.08%** | 1.40 → **1.69** | −45.51% → **−26.03%** | 100% → 82.76% |
+
+## Live Parper Trading Performance
+
+| Portfolio / Version | July | August | September | October | November¹ | Cumulative² | Avg. Exposure² |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Company | −24.04% → −8.66% | +20.29% → +8.13% | −5.02% → −5.66% | — | — | −13.22% → −6.82% | 100% → 80.10% |
+| My Signal | −20.26% → −1.58% | +12.55% → +5.14% | −5.79% → −2.06% | −19.30% → −6.53% | −0.25% → −6.34% | −31.94% → −11.26% | 100% → 51.63% |
+
+![Live tracking NAV and exposure](./live_tracking_nav_exposure.png)
 
 # Factor Pool
 ## Factor Pool Overview
@@ -176,6 +213,14 @@ The comparison reports **Min, P25, Median, P75, P90, P99, and Max** across facto
 | Barra20 | Company | 8,834 | Top-decile returns | 33.0% | 113 | 309 | 78.9% |
 | Barra20 | Own | 3,573 | Top-decile returns | 30.9% | 93 | 267 | 80.7% |
 
+### Signal Performance — Own Factor Pool
 
-# Timing Strategy
+The optimized portfolio uses CSI 1000 as its benchmark.
+
+| Period | No optimizer: Annualized return | Sharpe ratio | Max drawdown | With optimizer: Annualized return | Sharpe ratio | Max drawdown |
+|---|---:|---:|---:|---:|---:|---:|
+| In-sample (IS) | 30.19% | 2.32 | 20.18% | 19.49% | 3.97 | 5.89% |
+| Out-of-sample (OOS) | 26.50% | 1.96 | 28.11% | 15.25% | 2.73 | 4.96% |
+
+
 
