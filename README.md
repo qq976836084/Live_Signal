@@ -23,8 +23,8 @@ OOS period: April 1, 2025–September 30, 2026.
 |---|---:|---:|
 | Trading observations | 1,269 | 367 |
 | Annualized arithmetic excess | 24.39% | 20.81% |
-| Information ratio | 4.09 | 3.37 |
-| Maximum additive excess drawdown | 4.37 pp | 6.93 pp |
+| Excess sharpe ratio | 4.09 | 3.37 |
+| Maximum excess drawdown | 4.37% | 6.93% |
 | Turnover | 13.30 % | 14.54% |
 
 ## Excess Return Drawdown Analysis
@@ -35,8 +35,8 @@ The three episodes below have residual return max drawdown greater than 3 percen
 
 | Episode | Loss window | Total loss (pp) | 20 style factors (pp) | Industry / country (pp) | Costs (pp) | Residual (pp) |
 |---|---|---:|---:|---:|---:|---:|
-| **OOS-1** | Apr 9–Jun 30, 2026 | **−6.930** | −0.560 | −1.297 | −0.925 | −4.147 |
-| IS-1 | Dec 4, 2020–Jan 4, 2021 | **−4.370** | −0.223 | −0.273 | −0.071 | −3.803 |
+| **OOS-1** | Apr 9–Jun 30, 2026 | **−6.724** | −0.560 | −1.297 | −0.825 | −4.042 |
+| IS-1 | Dec 4, 2020–Jan 4, 2021 | **−4.421** | −0.223 | −0.324 | −0.071 | −3.803 |
 | IS-2 | Sep 23–Oct 31, 2024 | **−3.236** | +0.558 | +0.344 | −0.339 | −3.799 |
 
 ### 2. Market Conditions During Residual-Loss Episodes
@@ -52,7 +52,7 @@ The three episodes below have residual return max drawdown greater than 3 percen
 | Average benchmark weight in outperformers (%) | 35.078 | 35.572 | 38.002 |
 | Average portfolio weight in outperformers (%) | 20.698 | 17.485 | 16.744 |
 | Average active weight in outperformers (pp) | −14.380 | −18.087 | −21.258 |
-| Outperformers’ model-residual contribution (pp) | −4.436 | −2.677 | −2.734 |
+| Outperformers’ model-residual contribution (pp) | −4.436 | −3.677 | −2.734 |
 | **Trading-activity-group analysis** | | | |
 | Trading amount in busiest 5% | 35.55% | 32.74% | 33.87% |
 | Concentration percentile | 97.47th | 67.08th | 78.05th |
@@ -74,8 +74,8 @@ OOS period: April 1, 2025–September 30, 2026.
 | OOS metric | Company baseline | Combined signal | Change |
 |---|---:|---:|---:|
 | Annualized excess return | 21.42% | 24.38% | +2.96 pp |
-| Information ratio | 3.74 | 4.52 | +0.78 |
-| Maximum additive excess drawdown | 4.93 pp | 5.26 pp | +0.33 pp |
+| Sharpe ratio | 3.74 | 4.52 | +0.78 |
+| Excess max drawdown | 4.93 pp | 5.26 pp | +0.33 pp |
 
 ![Daily excess-return correlation](06_signal_correlation.png)
 
@@ -107,7 +107,7 @@ All comparisons show **Without timing → With timing**.
 
 ## Live Parper Trading Performance
 
-| Portfolio / Version | July | August | September | October | November¹ | Cumulative² | Avg. Exposure² |
+| Portfolio / Version | July | August | September | October | November | Cumulative | Avg. Exposure |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Company | −24.04% → −8.66% | +20.29% → +8.13% | −5.02% → −5.66% | — | — | −13.22% → −6.82% | 100% → 80.10% |
 | My Signal | −20.26% → −1.58% | +12.55% → +5.14% | −5.79% → −2.06% | −19.30% → −6.53% | −0.25% → −6.34% | −31.94% → −11.26% | 100% → 51.63% |
@@ -134,7 +134,7 @@ All comparisons show **Without timing → With timing**.
 
 - **Factor versions:**
   - **Original:** Factors with standard data preprocessing only.
-  - **Barra:** Residuals obtained by regressing the original factor values on all Barra style and industry exposures.
+  - **Neutralized:** Residuals obtained by regressing the original factor values on all Barra style and industry exposures.
 
 - **Evaluation metrics:** Report **Min, P25, Median, P75, P90, P99, and Max** across factors for:
   - **Top-decile five-day excess return (bp):** Five-day excess return of stocks ranked in the top 10% by factor value.
@@ -171,11 +171,11 @@ All comparisons show **Without timing → With timing**.
 | Version | Pool | Factor count | Series | PC1 variance explained | PCs for 80% variance | PCs for 90% variance | First 100 PCs variance explained |
 |---|---|---:|---|---:|---:|---:|---:|
 | Original | Company | 8,834 | IC | 39.0% | 37 | 150 | 87.2% |
-| Original | Own | 3,573 | IC | 35.8% | 14 | 52 | 93.6% |
+| Original | Own | 3,573 | IC | 35.8% | 24 | 72 | 93.6% |
 | Original | Company | 8,834 | Top-decile returns | 41.8% | 43 | 181 | 85.9% |
 | Original | Own | 3,573 | Top-decile returns | 36.3% | 25 | 123 | 88.8% |
 | Neutralized | Company | 8,834 | IC | 32.8% | 123 | 297 | 77.8% |
-| Neutralized | Own | 3,573 | IC | 37.5% | 42 | 138 | 87.5% |
+| Neutralized | Own | 3,573 | IC | 37.5% | 52 | 138 | 87.5% |
 | Neutralized | Company | 8,834 | Top-decile returns | 33.0% | 113 | 309 | 78.9% |
 | Neutralized | Own | 3,573 | Top-decile returns | 30.9% | 93 | 267 | 80.7% |
 
