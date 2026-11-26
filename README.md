@@ -117,39 +117,28 @@ All comparisons show **Without timing → With timing**.
 # Factor Pool
 ## Factor Pool Overview
 
-The analysis compares the company’s factor pool with my independently developed factor pool.
+- **Factor pools:** The analysis compares the company’s factor pool with my independently developed factor pool.
+  - **Company:** 8,834 factors.
+  - **Own:** 3,573 factors.
 
-| Factor pool | Number of factors |
-|---|---:|
-| Company | 8,834 |
-| Own | 3,573 |
+- **Evaluation periods:**
+  - **In-sample:** 2018Q1–2024Q2.
+  - **Out-of-sample:** 2024Q3–2026Q3.
 
-### Evaluation Periods
+- **Factor scope:** Price-volume factors only; fundamental factors are excluded.
 
-- **In-sample:** 2018Q1–2024Q2.
-- **Out-of-sample:** 2024Q3–2026Q3.
+- **Initial screening criteria:**
+  - In-sample Pearson IC greater than **0.02**.
+  - In-sample top-decile five-day excess return greater than **15 bp**.
+  - In-sample pairwise correlation between factors’ long-portfolio return time series below **0.60**.
 
-### Factor Scope and Screening
+- **Factor versions:**
+  - **Original:** Factors with standard data preprocessing only.
+  - **Barra:** Residuals obtained by regressing the original factor values on all Barra style and industry exposures.
 
-Both pools contain **price-volume factors only**; fundamental factors are excluded.
-
-Initial screening uses the following criteria:
-
-- In-sample Pearson IC greater than **0.02**.
-- In-sample top-decile five-day excess return greater than **15 bp**.
-- In sample pairwise correlation between factor long return time series below **0.60**.
-
-### Factor Versions
-
-- **Original:** Factors with standard data preprocessing only.
-- **Barra:** Residuals obtained by regressing the original factor values on all Barra style and industry exposures.
-
-### Evaluation Metrics
-
-The comparison reports **Min, P25, Median, P75, P90, P99, and Max** across factors for:
-
-- **Top-decile five-day excess return (bp):** Five-day excess return of stocks ranked in the top 10% by factor value.
-- **Pearson IC:** Cross-sectional Pearson correlation between factor values and subsequent five-day excess returns.
+- **Evaluation metrics:** Report **Min, P25, Median, P75, P90, P99, and Max** across factors for:
+  - **Top-decile five-day excess return (bp):** Five-day excess return of stocks ranked in the top 10% by factor value.
+  - **Pearson IC:** Cross-sectional Pearson correlation between factor values and subsequent five-day excess returns.
 
 ### Pearson IC
 
@@ -181,23 +170,22 @@ The comparison reports **Min, P25, Median, P75, P90, P99, and Max** across facto
 
 | Version | Pool | Factor count | Series | PC1 variance explained | PCs for 80% variance | PCs for 90% variance | First 100 PCs variance explained |
 |---|---|---:|---|---:|---:|---:|---:|
-| Size | Company | 8,834 | IC | 39.0% | 37 | 150 | 87.2% |
-| Size | Own | 3,573 | IC | 35.8% | 14 | 52 | 93.6% |
-| Size | Company | 8,834 | Top-decile returns | 41.8% | 43 | 181 | 85.9% |
-| Size | Own | 3,573 | Top-decile returns | 36.3% | 25 | 123 | 88.8% |
-| Barra20 | Company | 8,834 | IC | 32.8% | 123 | 297 | 77.8% |
-| Barra20 | Own | 3,573 | IC | 37.5% | 42 | 138 | 87.5% |
-| Barra20 | Company | 8,834 | Top-decile returns | 33.0% | 113 | 309 | 78.9% |
-| Barra20 | Own | 3,573 | Top-decile returns | 30.9% | 93 | 267 | 80.7% |
+| Original | Company | 8,834 | IC | 39.0% | 37 | 150 | 87.2% |
+| Original | Own | 3,573 | IC | 35.8% | 14 | 52 | 93.6% |
+| Original | Company | 8,834 | Top-decile returns | 41.8% | 43 | 181 | 85.9% |
+| Original | Own | 3,573 | Top-decile returns | 36.3% | 25 | 123 | 88.8% |
+| Neutralized | Company | 8,834 | IC | 32.8% | 123 | 297 | 77.8% |
+| Neutralized | Own | 3,573 | IC | 37.5% | 42 | 138 | 87.5% |
+| Neutralized | Company | 8,834 | Top-decile returns | 33.0% | 113 | 309 | 78.9% |
+| Neutralized | Own | 3,573 | Top-decile returns | 30.9% | 93 | 267 | 80.7% |
 
 ### Signal Performance — Own Factor Pool
 
 The optimized portfolio uses CSI 1000 as its benchmark.
 
-| Period | No optimizer: Annualized return | Sharpe ratio | Max drawdown | With optimizer: Annualized return | Sharpe ratio | Max drawdown |
-|---|---:|---:|---:|---:|---:|---:|
-| In-sample (IS) | 30.19% | 2.32 | 20.18% | 19.49% | 3.97 | 5.89% |
-| Out-of-sample (OOS) | 26.50% | 1.96 | 28.11% | 15.25% | 2.73 | 4.96% |
-
+| Period | Annualized excess return | Sharpe ratio | Max drawdown |
+|---:|---:|---:|---:|
+| In-sample (IS) | 19.49% | 3.97 | 5.89% |
+| Out-of-sample (OOS)| 15.25% | 2.73 | 4.96% |
 
 
